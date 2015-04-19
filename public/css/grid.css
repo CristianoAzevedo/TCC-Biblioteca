@@ -1,0 +1,49 @@
+#mytable {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#mytable caption {
+	padding: 0 0 5px 0;
+	width: 800px;	 
+	font: 15px 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+	padding:5px;
+	text-align: center;
+}
+
+#mytable th {
+	font: bold 11px 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 6px;
+	background: maroon;
+	width:auto;
+	text-align:center;
+}
+
+#mytable th.nobg {
+	border-top: 0;
+	border-left: 0;
+	border-right: 1px solid #C1DAD7;
+	background: none;
+}
+
+#mytable td {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	padding: 6px 6px 6px 12px;
+	color: #000000;
+	font-size:12px;
+}
+
+#mytable td.alt {
+	background: #F5FAFA;
+	color: #797268;
+}
