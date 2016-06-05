@@ -47,7 +47,7 @@ class Admin_EmprestimoController extends Util_Controller_Action2
     		
     		$result = array('status' => '2');
     		$emprestimo = $this->Model->save($dados);
-    		$update = $this->Item->update($result, $post['idItem']);
+    		$this->Item->update($result, $post['idItem']);
     		$msg = !empty($emprestimo) ? "Empréstimo cadastrado com sucesso!" : "Erro ao cadastrar";
 			$this->view->resposta = $msg;
     	}	
@@ -58,7 +58,7 @@ class Admin_EmprestimoController extends Util_Controller_Action2
 		$getEmprestimo = $this->Model->getEmprestimo();		
 		$dados='';
 		
-		foreach($getEmprestimo AS $id=>$value)
+		foreach($getEmprestimo as $value)
 		{
 			$dados[$value["idEmprestimo"]]=array(
 				'idEmprestimo' => $value['idEmprestimo'],

@@ -2,7 +2,6 @@
 
 class Admin_PaginasController extends Util_Controller_Action2
 {
-	private $Model_Paginas;
 	private $chave;
 	private $tabela;
 	

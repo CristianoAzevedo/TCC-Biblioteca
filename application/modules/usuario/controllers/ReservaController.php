@@ -15,7 +15,7 @@ class Usuario_ReservaController extends Util_Controller_Action3
     {   	
     	$getItem = $this->Item->getItem();
     	
-    	foreach($getItem as $id=>$value)
+    	foreach($getItem as $value)
     	{
     		$itens[$value["idItem"]]=array(
     			'idItem'=> $value["idItem"],
@@ -56,7 +56,7 @@ class Usuario_ReservaController extends Util_Controller_Action3
     		
     		$result = array('status' => '1');
 	     	$insert = $this->Reserva->save($dados);
-	     	$update = $this->Item->update($result, $post['idItem']);
+	     	$this->Item->update($result, $post['idItem']);
 		    $msg = $insert != 0 ? "Registro cadastrado com sucesso!" : "Erro ao cadastrar registro";
 			die($msg);
     	}
@@ -70,7 +70,7 @@ class Usuario_ReservaController extends Util_Controller_Action3
     	if ($this->_request->isPost())
     	{
     		$post = $this->_request->getParams();
-    		foreach($post as $id=>$value){    		
+    		foreach($post as $value){    		
     	    			
     			$result = array('status' => '0');
     			$update = $this->Reserva->update($result, $value['idReserva']);

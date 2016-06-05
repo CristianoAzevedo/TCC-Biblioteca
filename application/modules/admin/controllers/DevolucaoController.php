@@ -27,14 +27,14 @@ class Admin_DevolucaoController extends Util_Controller_Action2
 				"hmUser"        => date('His')
 			);
 			
-			$insert = $this->DevolucaoModel->save($valor);
+			$this->DevolucaoModel->save($valor);
 			$result = array('status' => '1');
 			$update = $this->EmprestimoModel->update($result,$idEmprestimo);
 			$diasAtraso = $this->_getParam('diasAtraso');
 			if($diasAtraso > 0)
 			{
 				$getdevolucao = $this->DevolucaoModel->getDevolucaobyUser($idEmprestimo);
-				foreach($getdevolucao as $id2=>$value2)
+				foreach($getdevolucao as $value2)
 				{
 					$devolucao = $value2['idDevolucao'];
 				}
@@ -48,11 +48,11 @@ class Admin_DevolucaoController extends Util_Controller_Action2
 					"hmUser"      => date('His')
 				);
 			
-				$insertMulta = $this->MultaModel->save($resultado);
+				$this->MultaModel->save($resultado);
 			}
 
 			$getItembyEmprestimo = $this->Item->getItembyEmprestimo($this->_getParam('idEmprestimo'));
-			foreach($getItembyEmprestimo as $id3=>$value3)
+			foreach($getItembyEmprestimo as $value3)
 			{
 				$idItem = $value3['idItem'];
 			}
@@ -62,7 +62,7 @@ class Admin_DevolucaoController extends Util_Controller_Action2
 		} 
 
 		$getEmprestimo = $this->EmprestimoModel->getEmprestimo();
-    	foreach($getEmprestimo AS $id=>$value)
+    	foreach($getEmprestimo as $value)
 		{
 			$dados[$value["idEmprestimo"]]=array(
 				'idEmprestimo' => $value['idEmprestimo'],

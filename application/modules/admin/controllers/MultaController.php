@@ -14,7 +14,7 @@ class Admin_MultaController extends Util_Controller_Action2
     	$getMulta = $this->MultaModel->getMulta();	
     	
     	$result = null;
-    	foreach($getMulta as $id=>$value)
+    	foreach($getMulta as $value)
     	{
     		$result[]= array(
     			'idMulta' => $value['idMulta'],
