@@ -58,7 +58,8 @@ class Usuario_ReservaController extends Util_Controller_Action3
 	     	$insert = $this->Reserva->save($dados);
 	     	$this->Item->update($result, $post['idItem']);
 		    $msg = $insert != 0 ? "Registro cadastrado com sucesso!" : "Erro ao cadastrar registro";
-			die($msg);
+			//die($msg);
+                    echo $msg;
     	}
     	
     	$this->view->usuario = $this->iduser->nome; 
