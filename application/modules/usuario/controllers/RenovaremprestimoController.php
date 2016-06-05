@@ -33,8 +33,8 @@ class Usuario_RenovaremprestimoController extends Util_Controller_Action3
     	
     	$usuario = $this->iduser->idusuarios;
     	$getEmprestimobyUser = $this->Emprestimo->getEmprestimobyUser($usuario);
-    	$dados=null;
-    	foreach($getEmprestimobyUser AS $id=>$value)
+    	$dados = null;
+    	foreach($getEmprestimobyUser as $value)
 		{
 			$dados[$value["idEmprestimo"]]=array(
 				'idEmprestimo' => $value['idEmprestimo'],
