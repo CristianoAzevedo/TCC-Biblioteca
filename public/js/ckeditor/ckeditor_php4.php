@@ -392,7 +392,7 @@ class CKEditor
 				}
 				else {
 					$_config['on'][$eventName] = '@@function (ev){';
-					foreach ($handlers as $handler => $code) {
+					foreach ($handlers as $code) {
 						$_config['on'][$eventName] .= '('.$code.')(ev);';
 					}
 					$_config['on'][$eventName] .= '}';
