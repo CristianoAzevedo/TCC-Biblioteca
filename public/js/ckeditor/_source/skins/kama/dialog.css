@@ -607,7 +607,7 @@ body .cke_dialog
 	width: 16px;
 	height: 16px;
 	background-repeat: no-repeat;
-	border: 1px none;
+	border: 1px;
 	font-size: 1px;
 }
 
