@@ -28,7 +28,7 @@ class Usuario_RenovaremprestimoController extends Util_Controller_Action3
 	    		"horaRenovacao" => date('His')
 	    	);
 	    	
-	    	$renovar = $this->Renovar->save($result);    	
+	    	$this->Renovar->save($result);    	
 		}
     	
     	$usuario = $this->iduser->idusuarios;

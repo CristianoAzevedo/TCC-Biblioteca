@@ -51,7 +51,7 @@ class Usuario_IndexController extends Util_Controller_Action3
 		
 		$result = null;
 		$getMultas = $this->Multa->getMultabyUser($usuario);
-		foreach ($getMultas as $id2=>$value2)
+		foreach ($getMultas as $value2)
 		{
 			$result[] = array(
 				'idMulta' => $value2['idMulta'],

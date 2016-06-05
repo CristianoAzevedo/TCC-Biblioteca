@@ -2,7 +2,6 @@
 
 class Admin_PostsController extends Util_Controller_Action2
 {
-	private $Model_Posts;
 	private $chave;
 	private $tabela;
 	

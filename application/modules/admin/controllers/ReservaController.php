@@ -27,14 +27,14 @@ class Admin_ReservaController extends Util_Controller_Action2
     		
     		$result = array('status' => '0');
     		$result2 = array('status' => '2');
-    		$emprestimo = $this->Emprestimo->save($dados);
-    		$update = $this->Reserva->update($result, $post['idReserva']);
-    		$update = $this->Item->update($result2, $post['idItem']);
+    		$this->Emprestimo->save($dados);
+    		$this->Reserva->update($result, $post['idReserva']);
+    		$this->Item->update($result2, $post['idItem']);
     	}
     	
     	$getAllReservas = $this->Reserva->getAllReservas();
     	
-    	foreach($getAllReservas AS $id=>$value)
+    	foreach($getAllReservas as $value)
     	{
     		$this->view->status = $value['status'];	
     	}
